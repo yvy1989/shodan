@@ -2,10 +2,12 @@ import requests
 
 api_key = input("Favor digite a sua API Key:\n")
 search_query = input("Agora insira a sua pesquisa no shodan para receber os endereços IP's:\n")
-
+port = input("Agora insira a porta:\n")
 
 # Send a request to the Shodan API
-response = requests.get(f"https://api.shodan.io/shodan/host/search?key={api_key}&query={search_query}")
+#response = requests.get(f"https://api.shodan.io/shodan/host/search?key={api_key}&query={search_query}")
+response = requests.get(f"https://api.shodan.io/shodan/host/search?key={api_key}&query={search_query}&port={port}")
+
 
 # Parse the JSON response and extract the IP addresses
 data = response.json()
