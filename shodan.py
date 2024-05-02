@@ -1,8 +1,8 @@
 import requests
 
-API_KEY = input("Favor digite a sua API Key:\n")
-query = input("Agora insira a sua pesquisa no shodan para receber os endereços IP's:\n")
-ip_limit = int(input("Digite um numero inteiro de resultados que voce gostaria de obter:\n"))
+API_KEY = input("Enter your API Key:\n")
+query = input("Now enter your search in shodan to receive IP addresses:\n")
+ip_limit = int(input("Enter an integer number of results you would like to get:\n"))
 
 url = f"https://api.shodan.io/shodan/host/search?key={API_KEY}&query={query}"
 
